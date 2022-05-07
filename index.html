@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="pt-br" id ="idiomaAtual">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfolio</title>
+    <link rel="stylesheet" href="styles/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+
+<body class="main-content">
+    
+    <header class="section sec1 cabecalho section-ativa" id="home">
+
+        <div class="header-content">
+
+            <div class ="header-esquerdo">
+
+                <div class ="h-esq-forma"></div>
+
+                <div class ="h-esq-imagem">
+                    <img src="imagens/devimage.png" alt ="">
+                </div>
+
+            </div>
+
+            <div class ="header-direito">
+
+                <h1 class="nome" id="header_nome">
+                    Olá, meu nome é <span >Rita</span>. 
+                    <br> 
+                    <h2 id="header_nome_titulo">Sou uma analista sênior desenvolvedora fullstack.</h2>
+                </h1>
+
+                <p class="descricao" id="header_descricao">
+                    <span>Sou apaixonada por tecnologia e inovação.</span>
+                    <br> 
+                    Desde criança sempre tive um grande interesse por estudar novos tópicos 
+                    e aprender mais sobre tudo o que me interessava, sendo o desenvolvimento 
+                    tecnológico minha paixão e ambição. 
+                    <br><br>
+                    Aos <span>10 anos</span> iniciei minha jornada em aulas de robótica e cursos
+                    gratuitos de informática. Aos <span>16 anos</span> conheci um mundo de plataformas 
+                    de estudo online que foram as maiores responsáveis por me introduzir de uma maneira mais 
+                    profissional ao mundo da programação. Aos <span>18 anos</span> ingressei no ensino 
+                    superior de Jogos Digitais com Unity3D, responsável por consolidar meu interesse 
+                    pelo desenvolvimento de soluções inteligentes, por me mostrar o quão importante seria 
+                    aprofundar meus conhecimentos e ampliar minhas ferramentas. Aos <span>21 anos</span> fiz minha 
+                    transferência para o curso de Engenharia de Software afim de focar ainda mais os meus estudos. 
+                    Como uma desenvolvedora, tenho muito a acrescentar e aprender com o mundo de T.I
+                    pois minha jornada está apenas começando.
+                </p>
+
+                <div class="botao-curriculo" id="botao-curriculo">
+                    <a href="" class="botao-principal">
+                        <span class="botao-texto" id="header_botaocurriculo">Baixar Currículo</span>
+                        <span class="botao-icone"><i class="fas fa-download"></i></span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="section sec2 sobre-mim" id="sobre-mim">
+            
+            <div class="titulo-principal">
+                <h2 id="sobremim_titulo">Sobre <span>mim</span><span class="texto-bg">HABILIDADES</span></h2>
+            </div>
+
+            <!-- Badges e Jornada Profissional -->
+            <div class ="sobre-mim-container">
+                
+                <div class="sobre-mim-esquerda">
+                    <h4 id="sobremim_jornadaprofissional_titulo">Minha Jornada Profissional</h4>
+                    <p id="sobremim_jornadaprofissional_descricao">Minha primeira oportunidade profissional veio através de uma resposta para os muitos currículos que enviei 
+                        logo em meu segundo semestre de faculdade. Eu estava empolgada para por em prática tudo o que aprendia e 
+                        absorver tudo o que o dia a dia de trabalho poderia me oferecer, tanto em hard quanto em soft skills.
+                        Colaborei então como estagiária em uma empresa de tecnologia 4.0 responsável por, através de sensores
+                        instalados nas fábricas de nossos clientes, medir a produtividade, formular previsões através da análise
+                        de dados e criar levantamentos de gastos por produção. Foi um grande desafio que me instigou imensamente 
+                        a entrar de cabeça nessa vida profissional.
+                    </p>
+                </div>
+
+                <div class="sobre-mim-direita">
+
+                    <div class="sobre-mim-item">
+                        <div class="sobre-mim-texto">
+                            <img src="imagens/nectarBadge.png" alt ="">
+                            <p class="texto-pequeno">Néctar Academy</p>
+                        </div>
+                    </div>
+
+                    <div class="sobre-mim-item">
+                        <div class="sobre-mim-texto">
+                            <img src="imagens\azureDataFundamentalsBadge.png" alt ="">
+                            <p class="texto-pequeno">Azure Data Fundamentals</p>
+                        </div>
+                    </div>
+
+                    <div class="sobre-mim-item">
+                        <div class="sobre-mim-texto">
+                            <img src="imagens\powerPlatformFunctionalConsultantBagde.png" alt ="">
+                            <p class="texto-pequeno">Power Platform Functional Consultant</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Idiomas -->
+            <div class="sobre-mim-habilidades">
+                
+                <h4 class="habilidades-titulo" id="idiomas_titulo">Idiomas</h4>
+
+                <div class="barras-de-progresso">
+
+                    <div class="barra-de-progresso-da-habilidade">
+                        <p class="titulo-da-habilidade" id="idioma_pt">Portugês</p>
+                        <div class="conteudo-progresso-habilidade">
+                            <p class="progresso-texto" id="idioma_pt_nivel">Nativo</p>
+                            <div class="progresso-quantidade">
+                                <span class="portugues"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="barra-de-progresso-da-habilidade">
+                        <p class="titulo-da-habilidade" id="idioma_en">Inglês</p>
+                        <div class="conteudo-progresso-habilidade">
+                            <p class="progresso-texto" id="idioma_en_nivel">Proficiente (C2+)</p>
+                            <div class="progresso-quantidade">
+                                <span class="ingles"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="barra-de-progresso-da-habilidade">
+                        <p class="titulo-da-habilidade" id="idioma_es">Espanhol</p>
+                        <div class="conteudo-progresso-habilidade">
+                            <p class="progresso-texto" id="idioma_es_nivel">Iniciante</p>
+                            <div class="progresso-quantidade">
+                                <span class="espanhol"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Soft Skills -->
+            <div class="sobre-mim-habilidades">
+                
+                <h4 class="habilidades-titulo">Soft Skills</h4>
+
+                <div class="barras-de-progresso">
+
+                    <div class="barra-de-progresso-da-habilidade">
+                        <p class="titulo-da-habilidade" id="sk1">Manejamento de Tempo</p>
+                    </div>
+
+                    <div class="barra-de-progresso-da-habilidade">
+                        <p class="titulo-da-habilidade" id="sk2">Comunicação</p>
+                    </div>
+
+                    <div class="barra-de-progresso-da-habilidade">
+                        <p class="titulo-da-habilidade" id="sk3">Adaptabilidade</p>
+                    </div>
+
+                    <div class="barra-de-progresso-da-habilidade">
+                        <p class="titulo-da-habilidade" id="sk4">Resolução de Problemas</p>
+                    </div>
+
+                    <div class="barra-de-progresso-da-habilidade">
+                        <p class="titulo-da-habilidade" id="sk5">Trabalho em Equipe</p>
+                    </div>
+
+                    <div class="barra-de-progresso-da-habilidade">
+                        <p class="titulo-da-habilidade" id="sk6">Liderança</p>
+                    </div>
+
+                    <div class="barra-de-progresso-da-habilidade">
+                        <p class="titulo-da-habilidade" id="sk7">Proatividade</p>
+                    </div>
+
+                    <div class="barra-de-progresso-da-habilidade">
+                        <p class="titulo-da-habilidade" id="sk8">Paciência</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Hard Skills -->
+            <div class="sobre-mim-habilidades">
+                
+                <h4 class="habilidades-titulo">Hard Skills</h4>
+
+                <div class="barras-de-progresso">
+
+                    <div class="barra-de-progresso-da-habilidade">
+                        <p class="titulo-da-habilidade">Bizagi</p>
+                        <div class="conteudo-progresso-habilidade">
+                            <p class="progresso-texto">100%</p>
+                            <div class="progresso-quantidade">
+                                <span class="bizagi"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="barra-de-progresso-da-habilidade">
+                        <p class="titulo-da-habilidade">Power Platform: Functional</p>
+                        <div class="conteudo-progresso-habilidade">
+                            <p class="progresso-texto">90%</p>
+                            <div class="progresso-quantidade">
+                                <span class="pp-functional"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="barra-de-progresso-da-habilidade">
+                        <p class="titulo-da-habilidade">Power Platform: Technical</p>
+                        <div class="conteudo-progresso-habilidade">
+                            <p class="progresso-texto">80%</p>
+                            <div class="progresso-quantidade">
+                                <span class="pp-technical"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="barra-de-progresso-da-habilidade">
+                        <p class="titulo-da-habilidade">Power Automate</p>
+                        <div class="conteudo-progresso-habilidade">
+                            <p class="progresso-texto">70%</p>
+                            <div class="progresso-quantidade">
+                                <span class="power-automate"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="barra-de-progresso-da-habilidade">
+                        <p class="titulo-da-habilidade">Power Apps: Canvas App</p>
+                        <div class="conteudo-progresso-habilidade">
+                            <p class="progresso-texto">50%</p>
+                            <div class="progresso-quantidade">
+                                <span class="pa-canvas"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="barra-de-progresso-da-habilidade">
+                        <p class="titulo-da-habilidade">Azure Data Factory</p>
+                        <div class="conteudo-progresso-habilidade">
+                            <p class="progresso-texto">60%</p>
+                            <div class="progresso-quantidade">
+                                <span class="adf"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="barra-de-progresso-da-habilidade">
+                        <p class="titulo-da-habilidade">Dynamics CRM: Integrations</p>
+                        <div class="conteudo-progresso-habilidade">
+                            <p class="progresso-texto">60%</p>
+                            <div class="progresso-quantidade">
+                                <span class="crm-integrations"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="barra-de-progresso-da-habilidade">
+                        <p class="titulo-da-habilidade">API Usage</p>
+                        <div class="conteudo-progresso-habilidade">
+                            <p class="progresso-texto">80%</p>
+                            <div class="progresso-quantidade">
+                                <span class="apiUsage"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="barra-de-progresso-da-habilidade">
+                        <p class="titulo-da-habilidade">API Development</p>
+                        <div class="conteudo-progresso-habilidade">
+                            <p class="progresso-texto">70%</p>
+                            <div class="progresso-quantidade">
+                                <span class="apiDev"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="barra-de-progresso-da-habilidade">
+                        <p class="titulo-da-habilidade">Dynamics CRM: Plug-in Development</p>
+                        <div class="conteudo-progresso-habilidade">
+                            <p class="progresso-texto">70%</p>
+                            <div class="progresso-quantidade">
+                                <span class="pluginDev"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="barra-de-progresso-da-habilidade">
+                        <p class="titulo-da-habilidade">Python</p>
+                        <div class="conteudo-progresso-habilidade">
+                            <p class="progresso-texto">90%</p>
+                            <div class="progresso-quantidade">
+                                <span class="python"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="barra-de-progresso-da-habilidade">
+                        <p class="titulo-da-habilidade">BPMN Solution Development</p>
+                        <div class="conteudo-progresso-habilidade">
+                            <p class="progresso-texto">90%</p>
+                            <div class="progresso-quantidade">
+                                <span class="bpmn"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="barra-de-progresso-da-habilidade">
+                        <p class="titulo-da-habilidade">HTML 5</p>
+                        <div class="conteudo-progresso-habilidade">
+                            <p class="progresso-texto">50%</p>
+                            <div class="progresso-quantidade">
+                                <span class="html"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="barra-de-progresso-da-habilidade">
+                        <p class="titulo-da-habilidade">CSS</p>
+                        <div class="conteudo-progresso-habilidade">
+                            <p class="progresso-texto">50%</p>
+                            <div class="progresso-quantidade">
+                                <span class="css"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="barra-de-progresso-da-habilidade">
+                        <p class="titulo-da-habilidade">JavaScript</p>
+                        <div class="conteudo-progresso-habilidade">
+                            <p class="progresso-texto">70%</p>
+                            <div class="progresso-quantidade">
+                                <span class="js"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="barra-de-progresso-da-habilidade">
+                        <p class="titulo-da-habilidade">C#</p>
+                        <div class="conteudo-progresso-habilidade">
+                            <p class="progresso-texto">80%</p>
+                            <div class="progresso-quantidade">
+                                <span class="csharp"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="barra-de-progresso-da-habilidade">
+                        <p class="titulo-da-habilidade">C</p>
+                        <div class="conteudo-progresso-habilidade">
+                            <p class="progresso-texto">90%</p>
+                            <div class="progresso-quantidade">
+                                <span class="c"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="barra-de-progresso-da-habilidade">
+                        <p class="titulo-da-habilidade">C++</p>
+                        <div class="conteudo-progresso-habilidade">
+                            <p class="progresso-texto">70%</p>
+                            <div class="progresso-quantidade">
+                                <span class="cplusplus"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="barra-de-progresso-da-habilidade">
+                        <p class="titulo-da-habilidade">Java</p>
+                        <div class="conteudo-progresso-habilidade">
+                            <p class="progresso-texto">70%</p>
+                            <div class="progresso-quantidade">
+                                <span class="java"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Timeline Profissional -->
+            <div class="sobre-mim-timeline">
+
+                <h4 class="habilidades-titulo" id="timeline_titulo">Linha do Tempo</h4>
+
+                <div class="timelines">
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-item-icone">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <p class="timeline-duracao" id="timeline1_duracao">De outubro de 2020 até abril de 2021</p>
+                        <h5 id="timeline1_titulo">Desenvolvedora Backend na COGNI</h5>
+                        <p id="timeline1_descricao">
+                            Como estagiária no setor de desenvolvimento da empresa COGNI tive a
+                            oportunidade de aprender o processo de desenvolvimento de uma aplicação do
+                            começo ao fim. Por ser uma empresa focada no desenvolvimento de soluções
+                            através de IoT, inteligência artificial e dashboards complexos, tive contato
+                            com o desenvolvimento de aplicações desktop na plataforma .Net, soluções de
+                            IA customizadas, processos de autenticação de VPN, conexão com o banco de
+                            dados PostgreSQL, utilização de APIs e conexões com o Bucket AWS. Fui responsável 
+                            por todas as etapas do projeto interno de Auditoria de Faturas Energéticas Empresariais, 
+                            desde o levantamento de requisitos, planejamento e modelagem até a implementação e 
+                            apresentação. Além do projeto de auditoria também trabalhei com o desenvolvimento 
+                            de skills para a Alexa e tive extenso contato com a Amazon Web Services.
+                        </p>
+                    </div>
+            
+                    <div class="timeline-item">
+
+                        <div class="timeline-item-icone">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <p class="timeline-duracao" id="timeline2_duracao">De abril de 2021 até o momento</p>
+                        <h5 id="timeline2_titulo">Analista Sênior na Accenture Song</h5>
+                        <p id="timeline2_descricao">
+                            Aqui entrei em contato pela primeira vez com as soluções CRM da Microsoft.
+                            Neste tempo aprendi a desenvolver sistemas CRM completos, tanto em âmbito funcional quanto
+                            técnico. Tive a oportunidade de utilizar ferramentas como a API padrão do Dynamics, 
+                            APIs customizadas do Dynamics, consumo de APIs externas para o Dynamics, 
+                            Canvas App, Plug-ins, customizações em JavaScript e Power Automate. Eu e meu time desenvolvemos os mais 
+                            diversos ambientes para os clientes, desde soluções de Vendas até Marketing e Field Services. 
+                            Ao longo deste tempo aprendi a desenvolver sistemas em conjunto com pequenos e grandes times,
+                            participar de reuniões diretamente com o cliente para o kick-off de projetos, desenho de soluções e 
+                            cerimônias SCRUM. Tive a chance também de trabalhar no código paralelamente com meu time através do uso de Git 
+                            na plataforma DevOps e Github além de manejar as tarefas das sprints utilizando ferramentas como o 
+                            próprio DevOps e Jira. Por fim, aprendi também a utilizar o Azure Data Factory para integração
+                            de dados e muitas outras integrações. Em suma, recebi a oportunidade 
+                            de aprender mais sobre as grandes soluções CRM oferecidas pela Microsoft através do Dynamics 365.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="section sec3 portfolio" id="portfolio">
+
+            <div class="titulo-principal">
+                <h2 id="portfolios_titulo">Meu <span>portfólio</span><span class="texto-bg">PROJETOS</span></h2>
+            </div>
+
+            <div class="portfolios">
+
+                <!-- Projeto Maple Bear -->
+                <div class="item-portfolio">
+
+                    <div class="imagem">
+                        <h2 id="portfolio1_titulo">Projeto Maple Bear</h2>
+                        <img src="imagens\portMapleBear.jpg" alt="">
+                    </div>
+
+                    <div class="descricao-portfolio">
+                        <p id="portfolio1_descricao">
+                            A escola Maple Bear precisava de um sistema CRM aliado a um aplicativo que pudesse
+                            ser usado diariamente por seus consultores educacionais. O aplicativo deveria performar
+                            como um sistema CRM portátil, conectado ao sistema CRM Dynamics para que ambos trabalhassem
+                            em conjunto. A solução deveria englobar a separação dos sistemas escolares de acordo com as
+                            várias unidades da Maple Bear do Brasil de modo que cada escola visualizasse 
+                            seus clientes, clientes potenciais e alunos para trabalhá-los dentro do sistema; a recepção 
+                            de clientes potenciais a partir de uma página de aterrissagem; um espaço que permitisse a 
+                            organização do consultor educacional através da criação de tarefas, lembretes de compromisso,
+                            e lembretes de telefonema que formassem um histórico de contato com o cliente e por fim o
+                            envio de contratos para assinatura através do Adobe Sign. Para isso, o time desenvolveu um CRM 
+                            utilizando o Dynamics 365 em conjunto de um Canvas App utilizando funções oferecidas pelo sistema
+                            como a separação de unidades de negócio, gerenciamento de clientes potenciais, criação de oportunidades
+                            de negócio a partir de clientes potenciais aquecidos, criação de pedidos com os produtos escolhidos e 
+                            envio de assinatura Adobe Sign através do Power Automate para então oferecer uma visão 360º 
+                            de todo o processo.
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="divisor">
+
+                <!-- Projeto RTM -->
+                <div class="item-portfolio">
+
+                    <div class="imagem">
+                        <h2 id="portfolio2_titulo">Projeto RTM</h2>
+                        <img src="imagens\portRTM.jpg" alt="">
+                    </div>
+
+                    <div class="descricao-portfolio">
+                        <p id="portfolio2_descricao">
+                            A empresa RTM conta com vários setores que contribuem para um serviço de qualidade, logo precisava
+                            de um sistema CRM capaz de oferecer etapas claras e organizadas para cada equipe envolvida na operação.
+                            Fazia-se necessária uma área adequada para a equipe de vendas trabalhar seus clientes em potencial, uma área
+                            de oportunidade de vendas disponível somente para os vendedores das equipes adequadas, campos dinâmicos 
+                            para o preenchimento de dados de acordo com o tipo da demanda e do projeto, produtos de venda configurados,
+                            etapa exclusiva para a operação das equipes técnicas dentro da oportunidade de vendas, fase de elaboração 
+                            da proposta, campos para controle do processo e manejamento contratual. Para atender às demandas o time de 
+                            desenvolvimento contou com formulários customizados, um pipeline customizado para o processo de negócio, 
+                            permissões de acesso aos formulários customizadas, automações de formulários e plug-ins para customizações 
+                            processuais.
+                        </p>
+                    </div>
+
+                </div>
+
+                <hr class="divisor">
+
+                <!-- Projeto MDC Energia -->
+                <div class="item-portfolio">
+
+                    <div class="imagem">
+                        <h2 id="portfolio3_titulo">Projeto MDC Energia</h2>
+                        <img src="imagens\portMDC.jpg" alt="">
+                    </div>
+
+                    <div class="descricao-portfolio">
+                        <p id="portfolio3_descricao">
+                            A análise de fontes energéticas é um assunto que a MDC Energia leva muito a sério e, para performar 
+                            sua proposta com organização e dedicação de ponta a ponta seria necessário um sistema CRM capaz de 
+                            separar seus setores energéticos em 3 sistemas CRM semelhantes, porém com algumas características 
+                            particulares: Os sistemas deveriam possuir a mesma base de dados de clientes, porém com diagnósticos
+                            e oportunidades independentes, formulários complexos e automatizados para a inserção 
+                            dos inúmeros dados envolvidos no processo de negócio e um sistema complexo sistema de aprovações 
+                            enviadas e monitoradas automaticamente pelo sistema. Além das necessidades sistemáticas, existiam 
+                            também as necessidades de usabilidade pois o caminho a ser seguido no processo da MDC Energia envolve
+                            uma rígida ordem de informações e aprovações que devem acontecer para que novas etapas do processo 
+                            possam ser atingidas, logo o sistema deveria guiar o usuário ao longo do processo. Para isso, um grande
+                            sistema customizado foi criado, contando com 3 aplicativos diferentes, formulários independentes, 
+                            base de clientes compartilhada, redirecionamentos de registros entre as 3 aplicações, sistema
+                            de armazenamento de documentos e envio dos documentos para os aprovadores determinados pelos administradores
+                            do sistema e mensagens que guiam os usuários ao longo das etapas e aprovações que, em específico, foram desenvolvidos
+                            com uma lógica robusta e inteligente que detecta qual é o documento enviado e para quais aprovadores deve seguir.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!--<hr class="divisor">
+
+                <div class="item-portfolio">
+
+                    <div class="imagem">
+                        <h2>Nome do Projeto</h2>
+                        <img src="imagens\port1.jpg" alt="">
+                    </div>
+
+                    <div class="descricao-portfolio">
+                        <p>
+                            Descrição
+                        </p>
+                    </div>
+
+                </div>-->
+
+                <hr class="divisor">
+
+            </div>
+
+        </section>
+
+        <section class="section sec5 contato" id="contato">
+            <div class="contato-container">
+
+                <div class="titulo-principal">
+                    <h2 id="contato_titulo">Meu <span>Contato</span><span class="texto-bg">FORMULÁRIO</span></h2>
+                </div>
+
+                <div class="conteudo-contato">
+
+                    <div class="contato-esquerda">
+
+                        <h4 id="contato_subtitulo">Entre em contato</h4>
+
+                        <p id="contato_descricao">
+                            Abaixo encontram-se minhas informações gerais e dados de contato. Para entrar em contato 
+                            por favor utilize um dos meios listados.
+                        </p>
+
+                        <div class="contato-informacoes">
+
+                            <!-- Endereço -->                
+                            <div class="contato-item">
+
+                                <div class="icone">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <p id="contato_endereco_titulo">Endereço:</p>
+                                </div>
+                                <p id="contato_endereco">
+                                    Indaiatuba, São Paulo, Brasil. 
+                                </p>
+
+                            </div>
+
+                            <!-- Email -->                
+                            <div class="contato-item">
+
+                                <div class="icone">
+                                    <i class="fa-solid fa-at"></i>
+                                    <p  id="contato_email_titulo">E-mail:</p>
+                                </div>       
+                                <p id="contato_email">
+                                    ritasantosrangeldev@gmail.com    
+                                </p>
+                            
+                            </div>
+                            
+                            <!-- Educação -->                
+                            <div class="contato-item">
+
+                            <div class="icone">
+                                <i class="fa-solid fa-award"></i>
+                                <p  id="contato_formacao_titulo">Formação:</p>
+                            </div>       
+                            <p id="contato_formacao">
+                                Software Engineer (2022)  
+                            </p>
+                                                 
+                            </div>
+
+                            <!-- Telefone -->                
+                            <div class="contato-item">
+
+                                <div class="icone">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <p id="contato_telefone_titulo">Telefone:</p>
+                                </div>       
+                                <p id="contato_telefone">
+                                    +55 (19) 99681-2648
+                                </p>
+                                                     
+                            </div>
+
+                            <!-- Idiomas -->                
+                            <div class="contato-item">
+
+                                <div class="icone">
+                                    <i class="fa-solid fa-language"></i>
+                                    <p id="contato_idiomas_titulo">Idiomas:</p>
+                                </div>       
+                                <p id="contato_idiomas">
+                                    Português e Inglês.
+                                </p>
+                                                     
+                            </div>
+
+                        </div>
+
+                        <div class="icones-contato">
+
+                            <div class="icone-contato">
+                                
+                                <!-- Github --> 
+                                <a href="https://github.com/RitaCSRangel" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+
+                                <!-- Linkedin --> 
+                                <a href="https://www.linkedin.com/in/rita-de-c%C3%A1ssia-santos-rangel-32029314b/" target="_blank">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--
+                    <div class="contato-direita">
+                        <form action="" class="formulario-contato">
+
+                            Nome e E-mail
+                            <div class="controle-input espaco">
+                                
+                                <input type="text" required placeholder="Seu nome" id="contato_seunome">
+                                <input type="email" required placeholder="Seu email" id="contato_seuemail">
+
+                            </div>
+
+                            Assunto
+                            <div class="controle-input">
+                                
+                                <input type="text" required placeholder="Assunto">
+
+                            </div>
+
+                            Mensagem
+                            <div class="controle-input">
+                                
+                                <textarea name="" id="" cols="15" rows="8" placeholder="Mensagem"></textarea>
+
+                            </div>
+
+                            <div class="botao-de-envio">
+
+                                <div class="botao-curriculo">
+                                    <a href="" class="botao-principal">
+                                        <span class="botao-texto">Baixar Currículo</span>
+                                        <span class="botao-icone"><i class="fas fa-download"></i></span>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </form>
+                    </div>
+                    -->
+                    
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <div class="main-controls">
+
+        <div class="control control1 botao-ativo" data-id="home">
+            <i class="fa-solid fa-house"></i>
+        </div>
+
+        <div class="control control2" data-id="sobre-mim">
+            <i class="fa-solid fa-user-astronaut"></i>
+        </div>
+
+        <div class="control control3" data-id="portfolio">
+            <i class="fa-solid fa-book-atlas"></i>
+        </div>
+
+        <div class="control control5" data-id="contato">
+            <i class="fa-solid fa-id-card"></i>
+        </div>
+
+    </div>
+
+    <div class="botoes-toggle">
+
+        <div class="botao-toggle botao-tema">
+            <i class="fas fa-adjust"></i>
+        </div>
+    
+        <div class="botao-toggle botao-idioma">
+            <i class="fas fa-language"></i>
+        </div>
+
+    </div>
+
+    <script src="aplicativo.js"></script>
+</body>
+</html>

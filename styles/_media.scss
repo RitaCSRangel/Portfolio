@@ -1,0 +1,197 @@
+//Documento que define as configurações para tamanho mobile (600px ou menos)
+@media screen and (max-width: 600px){
+
+    header{
+        padding:0;
+
+    }
+
+    header .header-direito{
+        padding: 2rem !important;
+    }
+
+    .botao-tema{
+        width: 50px;
+        height: 50px;
+    }
+
+    .header-content{
+        grid-template-columns: 1fr;
+        padding-bottom: 6rem;
+    }
+
+    .header-esquerdo{
+        .h-esq-forma{
+            display: none;
+        }
+        .h-esq-imagem{
+            display: none;
+        }
+    }
+
+    .header-direito{
+        grid-row: 1;
+        width: 90%;
+        margin: 0 auto;
+        .nome{
+            font-size: 2.5rem;
+        }
+    }
+    
+    .section{
+        padding: 2rem 2.5rem;
+    }
+
+    .sobre-mim-container{
+        grid-template-columns: 1fr;
+        .sobre-mim-direita{
+            grid-template-columns: 1fr;
+            padding-top: 2.5rem;
+        }
+        .sobre-mim-esquerda{
+            padding-right: 0;
+            p{
+                padding-left: 0;
+            }
+        }
+    }
+
+    .sobre-mim-timeline {
+        padding-bottom: 4rem;
+    
+        //Classe das timelines (container)
+        .timelines {
+            display: block;
+            padding-bottom: 2rem;
+    
+            //Item da timeline
+            .timeline-item {
+                position: block;
+                padding-left: 3rem;
+                border-left: 1px solid var(--cor-cinza5);
+    
+                //Fundo do ícone do item da timeline
+                .timeline-item-icone {
+                    position: absolute;
+                    left: -27px;
+                    top: 0;
+                    background-color: var(--cor-fundoBotao);
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+    
+                    //Ícone do item da timeline
+                    i {
+                        font-size: 1.3rem;
+                        color: var(--cor-iconeBotao);
+                    }
+                }
+    
+                //Duração do item da timeline
+                .timeline-duracao {
+                    padding: .2rem .6rem;
+                    background-color: var(--cor-cinza5);
+                    border-radius: 15px;
+                    display: inline-block;
+                    font-size: .8rem;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .portfolios {
+        margin-top: 3rem;
+    
+        //Itens de portfolio
+        .item-portfolio {
+            display: block;
+            border-radius: 15px;
+    
+            //Classe da imagem no canto esquerdo
+            .imagem {
+                padding-right: 0;
+    
+                //Título do projeto
+                h2 {
+                    text-align: center;
+                    color: var(--cor-elementoDestacado-1);
+                }
+    
+                //Imagem do item de portfolio
+                img {
+                    align-items: center;
+                    padding-top: 3rem;
+                    width: 100%;
+                    height: 300px;
+                    object-fit: contain;
+                    border-radius: 15px;
+                }
+            }
+    
+            //Classe do texto no canto direito
+            .descricao-portfolio {
+                justify-content: left;
+    
+                p {
+                    padding-top: 1rem;
+                    text-align: left;
+                }
+            }
+    
+        }
+    }
+
+    .sobre-mim-habilidades{
+        .barras-de-progresso{
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .conteudo-contato{
+        flex-direction: column;
+        .contato-direita{
+            margin-left: 0;
+            margin-top: 2.5rem;
+        }
+    }
+
+    .conteudo-contato .contato-direita .espaco{
+        flex-direction: column;
+    }
+
+    .conteudo-contato .contato-direita .espaco :last-child{
+        margin-left: 0;
+        margin-top: 1.5rem;
+    }
+
+    .titulo-principal{
+        h2{
+            font-size: 2rem;
+            .span{
+                font-size: 2.5rem;
+            }
+            .texto-bg{
+                font-size: 3rem;
+            }
+        }
+    }
+
+    .main-controls{
+        top: auto;
+        bottom: 0;
+        flex-direction: row;
+        justify-content: center;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        background-color: var(--cor-cinza5);
+        .control{
+            margin: 1rem .3rem;
+        }
+    }
+}

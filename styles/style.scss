@@ -1,0 +1,901 @@
+//Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+//Variáveis de cor
+:root {
+    --cor-primaria: #393d3f;
+    --cor-secundaria: #c6c5b9;
+    --cor-branco: #fdfdff;
+    --cor-fundoBotao: #546a7b;
+    --cor-iconeBotao: #8abcc8;
+    --cor-preto: #000;
+    --cor-cinza0: #f8f8f8;
+    --cor-cinza1: #dbe1e8;
+    --cor-cinza2: #b2becd;
+    --cor-cinza3: #6c7983;
+    --cor-cinza4: #454e56;
+    --cor-cinza5: #2a2e35;
+    --cor-cinza6: #12181b;
+    --cor-elementoDestacado-1: #c6def1;
+    --cor-elementoDestacado-2: #f9c6c9;
+    --br-sm-2: 14px;
+    --caixa-sombra-1: 0 3px 15px rgba(0, 0, 0, .3);
+}
+
+.modo-claro{
+    --cor-primaria: #8e9aaf;
+    --cor-secundaria: #cbc0d3;
+    --cor-branco: #fdfdff;
+    --cor-fundoBotao: #efd3d7;
+    --cor-iconeBotao: #bca8b8;
+    --cor-preto: #000;
+    --cor-cinza0: #f8f8f8;
+    --cor-cinza1: #e8ebf0;
+    --cor-cinza2: #dfe5ec;
+    --cor-cinza3: #dee3e7;
+    --cor-cinza4: #969899;
+    --cor-cinza5: #b8bbc0;
+    --cor-cinza6: #51575a;
+    --cor-elementoDestacado-1: #deb7b9;
+    --cor-elementoDestacado-2: #f9c6c9;
+    --br-sm-2: 14px;
+    --caixa-sombra-1: 0 3px 15px rgba(0, 0, 0, .3);
+}
+
+//Definição geral do fundo (Body)
+body {
+    background-color: var(--cor-primaria);
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1rem;
+    color: var(--cor-branco);
+    transition: all .4s ease-in-out;
+}
+
+//Definição geral dos links (a)
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+}
+
+//Definição geral do cabeçalho (header)
+header {
+    min-height: 100vh;
+    color: var(--cor-branco);
+    overflow: hidden;
+}
+
+//Definição geral das seções (section)
+section {
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 3rem 18rem;
+}
+
+//------------ SECTIONS -------------
+
+//Classe section
+.section {
+    transform: translateY(-100%) scale(0);
+    transition: all .4s ease-in-out;
+    background-color: var(--cor-primaria);
+}
+
+//Classe sec1
+.sec1 {
+    display: none;
+    transform: translateY(0) scale(1);
+}
+
+//Classe sec2
+.sec2 {
+    display: none;
+    transform: translateY(0) scale(1);
+}
+
+//Classe sec3
+.sec3 {
+    display: none;
+    transform: translateY(0) scale(1);
+}
+
+//Classe sec4
+.sec4 {
+    display: none;
+    transform: translateY(0) scale(1);
+}
+
+//Classe sec5
+.sec5 {
+    display: none;
+    transform: translateY(0) scale(1);
+}
+
+//Classe section-ativa
+.section-ativa {
+    display: block;
+    animation: scaleAnim 1s ease-in-out;
+
+    //Animação da seção aparecendo na tela
+    @keyframes scaleAnim {
+        0% {
+            transform: translateY(-100%) scaleY(0);
+        }
+
+        100% {
+            transform: translateY(0) scaleY(1);
+        }
+    }
+}
+
+//------------ BOTÕES -------------
+
+//Classe de definição geral dos botões laterais (Parent Container)
+.main-controls {
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    right: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+
+    //Subclasse de botões: Botões ativos
+    .botao-ativo {
+        background-color: var(--cor-secundaria) !important;
+        transition: all .4s ease-in-out;
+
+        //Ícone
+        i {
+            color: var(--cor-branco) !important;
+        }
+    }
+
+    //Subclasse de botões: Botões inativos (estado normal)
+    .control {
+        padding: 1rem;
+        cursor: pointer;
+        background-color: var(--cor-fundoBotao);
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: .7rem 0;
+        box-shadow: var(--caixa-sombra-1);
+
+        //Subclasse de botões: Icones
+        i {
+            font-size: 1.2rem;
+            color: var(--cor-iconeBotao);
+            pointer-events: none;
+        }
+    }
+}
+
+//Classe de definição geral dos botões superiores (Parent Container)
+.botoes-toggle{ 
+    position: fixed;
+    width: 150px;
+    top: 5%;
+    right: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .botao-toggle{
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        background-color: var(--cor-cinza4);
+        cursor: pointer;
+        box-shadow: 0 3px 15px rgba(0, 0, 0, .3);
+        transition: all .1s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:active{
+            transform: translateY(-5px);
+        }
+        
+        i{
+            font-size: 1.4rem;
+            color: var(--cor-cinza2);
+            pointer-events: none;
+
+        }
+    }
+    
+    
+}
+
+//------------ CONTEÚDOS DO HEADER ------------
+
+//Classe geral dos elementos do cabeçalho (Parent Container)
+//Nota: O cabeçalho desta página não fica em cima.
+.header-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 100vh;
+
+    //Classe da divisão esquerda do header
+    .header-esquerdo {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        //Forma atrás da imagem
+        .h-esq-forma {
+            transition: all .4s ease-in-out;
+            width: 65%;
+            height: 100%;
+            background-color: var(--cor-secundaria);
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            clip-path: polygon(0 0, 39% 0, 77% 100%, 0% 100%);
+        }
+
+        //Imagem acima da forma
+        .h-esq-imagem {
+            border-radius: var(--br-sm-2);
+            height: 90%;
+            width: 68%;
+            margin-left: 4rem;
+            background-color: var(--cor-fundoBotao);
+            transition: all .4s ease-in-out;
+
+            //Definição de imagem (img)
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all .4s ease-in-out;
+                filter: grayscale(100%);
+
+                &:hover {
+                    //Ao passar o mouse em cima
+                    filter: grayscale(0);
+                }
+            }
+        }
+    }
+
+    //Classe da divisão direita do header
+    .header-direito {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 18rem;
+
+        //Classe nome
+        .nome {
+            font-size: 3rem;
+
+            //Definição de span
+            span {
+                font-family: Verdana;
+                font-weight: bold;
+                color: var(--cor-elementoDestacado-2);
+            }
+        }
+
+        //Definição de parágrafo (p)
+        p {
+            margin: 1.5rem;
+            line-height: 2rem;
+
+            span {
+                font-weight: bold;
+                color: var(--cor-elementoDestacado-2);
+            }
+        }
+    }
+}
+
+//------------ CONTEÚDOS INDEPENDENTES ------------
+
+//Classe do título da seção Sobre Mim
+.titulo-principal {
+    text-align: center;
+
+    //Definição de h2
+    h2 {
+        position: relative;
+        text-transform: uppercase;
+        font-size: 4rem;
+        font-weight: 700;
+
+        //Definição de span
+        span {
+            color: var(--cor-elementoDestacado-2);
+        }
+
+        //Classe do texto que fica semi-transparente embaixo do "Sobre Mim"
+        .texto-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: #edf6f91c;
+            transition: all .4s ease-in-out;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            font-weight: 800;
+            font-size: 6.3rem;
+        }
+    }
+}
+
+.divisor {
+    margin-top: 3rem;
+    border-top: 3px solid var(--cor-elementoDestacado-1);
+}
+
+//------------ CONTEÚDOS DEPENDENTES ------------
+
+//1. BOTÃO DE CURRÍCULO
+
+//Classe geral dos elementos do botão-curriculo (Parent Container)
+.botao-curriculo {
+    display: flex;
+    align-self: flex-start;
+}
+
+//Classe botão principal
+.botao-principal {
+    border-radius: 30px;
+    color: inherit;
+    font-weight: 600;
+    position: relative;
+    border: 1px solid var(--cor-elementoDestacado-1);
+    display: flex;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    //Classe do texto do botão de currículo
+    .botao-texto {
+        padding: 0 2rem;
+        color: var(--cor-cinza3);
+    }
+
+    //Classe do ícone do botão de currículo
+    .botao-icone {
+        background-color: var(--cor-elementoDestacado-1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        padding: 1rem;
+
+        i {
+            color: var(--cor-cinza3);
+        }
+    }
+
+    //Estado do botão antes
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
+        transition: all .4s ease-in-out;
+        z-index: -1;
+    }
+
+    //Estado do botão após passar o mouse em cima
+    &:hover {
+        &::before {
+            width: 100%;
+            height: 100%;
+            background-color: var(--cor-elementoDestacado-1);
+            transform: translateX(0);
+        }
+    }
+}
+
+//2.1 ELEMENTOS DA SEÇÃO "SOBRE MIM" - TEXTO E BADGES
+
+//Classe com o conteúdo de sobre-mim (parent container)
+.sobre-mim-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 3.5rem;
+    padding-bottom: 5rem;
+
+    //Classe do sobre mim que cuida das badges (container)
+    .sobre-mim-direita {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+
+        //Classe das caixas das badges
+        .sobre-mim-item {
+            border: 1px solid var(--cor-elementoDestacado-1);
+            border-radius: 5px;
+            transition: all .4s ease-in-out;
+            box-shadow: 1px 2px 15px rgba(0, 0, 0, .1);
+
+            //Ao passar o mouse destaca a caixa
+            &:hover {
+                cursor: default;
+                transform: translateY(-5px);
+                border: 1px solid var(--cor-elementoDestacado-2);
+                box-shadow: 1px 4px 15px rgba(0, 0, 0, .32);
+            }
+
+            //Conteúdo da caixa de badge
+            .sobre-mim-texto {
+                padding: 1.5rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                //Imagem da badge
+                img {
+                    width: 60%;
+                    height: 60%;
+                    padding-bottom: 1rem;
+                }
+
+                //Texto abaixo da imagem da badge
+                .texto-pequeno {
+                    position: relative;
+                    text-transform: uppercase;
+                    font-size: 1.2 rem;
+                    color: var(--cor-cinza1);
+                    letter-spacing: 2px;
+                }
+            }
+        }
+    }
+
+    //Classe do sobre mim que cuida do texto (container) 
+    .sobre-mim-esquerda {
+        padding-right: 5rem;
+
+        p {
+            line-height: 2rem;
+            padding: 1rem;
+            color: var(--cor-branco);
+        }
+
+        h4 {
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+    }
+}
+
+//2.2 ELEMENTOS DA SEÇÃO "SOBRE MIM" - MINHAS HABILIDADES
+
+//Classe do título das Minhas Habilidades
+.habilidades-titulo {
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+    padding: 3.5rem 0;
+    position: relative;
+    color: var(--cor-elementoDestacado-2);
+
+    &::before {
+        content: '';
+        left: 50%;
+        top: 0;
+        width: 40%;
+        height: 1px;
+        background-color: var(--cor-cinza5);
+        transform: translateY(-50%);
+    }
+}
+
+//Classe com o conteúdo de habilidades (parent container)
+.sobre-mim-habilidades {
+    padding-bottom: 4rem;
+
+    //Classe das barras de progresso (container)
+    .barras-de-progresso {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+
+        //Definição de uma barra de progresso
+        .barra-de-progresso-da-habilidade {
+            display: flex;
+            flex-direction: column;
+
+            //Título da barra de progresso
+            .titulo-da-habilidade {
+                text-transform: uppercase;
+                font-weight: 500;
+            }
+
+            //Conteúdo da barra de progresso
+            .conteudo-progresso-habilidade {
+                display: flex;
+                align-items: center;
+
+                //Texto da skill da barra de progresso
+                .progresso-texto {
+                    color: var(--cor-cinza2)
+                }
+
+                //Barra de progressão da skill
+                .progresso-quantidade {
+                    width: 100%;
+                    height: .45rem;
+                    background-color: var(--cor-cinza4);
+                    margin-left: 2rem;
+                    position: relative;
+
+                    //Quantidade progredida
+                    span {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        background-color: var(--cor-elementoDestacado-2);
+                        transition: all .4s ease-in-out;
+                        width: 70%;
+                    }
+
+                    //Hard Skills
+                    .bizagi {
+                        width: 100%;
+                    }
+
+                    .pp-functional {
+                        width: 90%;
+                    }
+
+                    .pp-technical {
+                        width: 80%;
+                    }
+
+                    .power-automate {
+                        width: 70%;
+                    }
+
+                    .pa-canvas {
+                        width: 50%;
+                    }
+
+                    .adf {
+                        width: 60%;
+                    }
+
+                    .crm-integrations {
+                        width: 60%;
+                    }
+
+                    .apiUsage {
+                        width: 80%;
+                    }
+
+                    .apiDev {
+                        width: 70%;
+                    }
+
+                    .pluginDev {
+                        width: 70%;
+                    }
+
+                    .python {
+                        width: 90%;
+                    }
+
+                    .bpmn {
+                        width: 90%;
+                    }
+
+                    .html {
+                        width: 50%;
+                    }
+
+                    .css {
+                        width: 50%;
+                    }
+
+                    .js {
+                        width: 70%;
+                    }
+
+                    .csharp {
+                        width: 80%;
+                    }
+
+                    .c {
+                        width: 90%;
+                    }
+
+                    .cplusplus {
+                        width: 70%;
+                    }
+
+                    .java {
+                        width: 70%;
+                    }
+
+                    //Idiomas
+                    .portugues {
+                        width: 100%;
+                    }
+
+                    .ingles {
+                        width: 95%;
+                    }
+
+                    .espanhol {
+                        width: 20%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//2.2 ELEMENTOS DA SEÇÃO "SOBRE MIM" - TIMELINE
+
+//Classe de definição da timeline (Parent Container)
+.sobre-mim-timeline {
+    padding-bottom: 4rem;
+
+    //Classe das timelines (container)
+    .timelines {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+        padding-bottom: 2rem;
+
+        //Item da timeline
+        .timeline-item {
+            position: relative;
+            padding-left: 3rem;
+            border-left: 1px solid var(--cor-cinza5);
+
+            //Fundo do ícone do item da timeline
+            .timeline-item-icone {
+                position: absolute;
+                left: -27px;
+                top: 0;
+                background-color: var(--cor-fundoBotao);
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                //Ícone do item da timeline
+                i {
+                    font-size: 1.3rem;
+                    color: var(--cor-iconeBotao);
+                }
+            }
+
+            //Duração do item da timeline
+            .timeline-duracao {
+                padding: .2rem .6rem;
+                background-color: var(--cor-cinza5);
+                border-radius: 15px;
+                display: inline-block;
+                font-size: .8rem;
+                text-transform: uppercase;
+                font-weight: 500;
+            }
+
+            //Subtítulo do item da Timeline
+            h5 {
+                padding: 1rem 0;
+                text-transform: uppercase;
+                font-size: 1.3rem;
+                font-weight: 600;
+                color: var(--cor-elementoDestacado-1);
+            }
+
+            //Texto do item da timeline
+            p {
+                color: var(--cor-cinza2);
+            }
+        }
+    }
+}
+
+//3. ELEMENTOS DA SEÇÃO PORTFOLIO
+
+//Texto de apresentação da seção de Portfolio
+.texto-portfolio {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+//Definição geral de portfolios (Parent container)
+.portfolios {
+    grid-gap: 2rem;
+    margin-top: 3rem;
+
+    //Itens de portfolio
+    .item-portfolio {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        border-radius: 15px;
+
+        //Classe da imagem no canto esquerdo
+        .imagem {
+            padding-right: 5rem;
+
+            //Título do projeto
+            h2 {
+                text-align: center;
+                color: var(--cor-elementoDestacado-1);
+                padding-top: 2rem;
+            }
+
+            //Imagem do item de portfolio
+            img {
+                align-items: center;
+                padding-top: 3rem;
+                width: 100%;
+                height: 300px;
+                object-fit: contain;
+                border-radius: 15px;
+            }
+        }
+
+        //Classe do texto no canto direito
+        .descricao-portfolio {
+            display: grid;
+            justify-content: left;
+
+            p {
+                padding-top: 1rem;
+                text-align: left;
+            }
+        }
+
+    }
+}
+
+//Definição geral do Contato (Parent container)
+.conteudo-contato {
+    display: flex;
+    padding-top: 3.5rem;
+
+    //Esquerda
+    .contato-esquerda {
+        flex: 2;
+
+        //Título
+        h4 {
+            margin-top: 1rem;
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+
+        //Texto de contato
+        p {
+            margin: 1rem 0;
+            line-height: 2rem;
+        }
+
+        //Definição geral dos dados de contato (Parent Container)
+        .contato-informacoes {
+
+            //Dados de Contato
+            .contato-item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                //Texto
+                p {
+                    margin: .3rem 0 !important;
+                    padding: 0 !important;
+                }
+
+                //Ícone
+                .icon {
+                    display: grid;
+                    grid-template-columns: 40px 1fr;
+
+                    i {
+                        display: flex;
+                        align-items: center;
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+
+        //Ícones de contato (redes sociais)
+        .icone-contato {
+            display: flex;
+            margin-top: 2rem;
+
+            a {
+                display: flex;
+                align-items: center;
+                color: var(--cor-branco);
+                background-color: var(--cor-cinza5);
+                cursor: pointer;
+                justify-content: center;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                margin: 0 .4rem;
+                transition: all .4s ease-in-out;
+
+                &:hover {
+                    background-color: var(--cor-secundaria);
+
+                    i {
+                        color: var(--cor-primaria);
+                    }
+                }
+
+                i {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+
+    //Direita
+    .contato-direita {
+        flex: 3;
+        margin-left: 3rem;
+
+        //Definição geral de input (Parent Container)
+        .controle-input {
+            margin: 1.5rem 0;
+
+            //Definição de input e textarea
+            input,
+            textarea {
+                border-radius: 30px;
+                font-weight: inherit;
+                font-size: inherit;
+                font-family: inherit;
+                padding: .8rem 1.1rem;
+                outline: none;
+                border: none;
+                background-color: var(--cor-cinza5);
+                width: 100%;
+                color: var(--cor-branco);
+                resize: none;
+            }
+        }
+
+        //Classe espaço
+        .espaco {
+            display: flex;
+
+            :last-child {
+                margin-left: 1.5rem;
+            }
+        }
+    }
+
+}
+
+//Importar outros documentos
+@import './media';
