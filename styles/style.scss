@@ -253,11 +253,12 @@ section {
         //Imagem acima da forma
         .h-esq-imagem {
             border-radius: var(--br-sm-2);
-            height: 90%;
-            width: 68%;
-            margin-left: 4rem;
+            height: 70%;
+            width: 80%;
+            margin-left: 2rem;
             background-color: var(--cor-fundoBotao);
             transition: all .4s ease-in-out;
+            margin-top:-25%;
 
             //Definição de imagem (img)
             img {
@@ -280,7 +281,7 @@ section {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-right: 18rem;
+        padding-right: 10rem;
 
         //Classe nome
         .nome {
@@ -424,6 +425,8 @@ section {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 1rem;
+        margin-left: -30%;
+        padding-right: 20%;
 
         //Classe das caixas das badges
         .sobre-mim-item {
@@ -468,7 +471,8 @@ section {
 
     //Classe do sobre mim que cuida do texto (container) 
     .sobre-mim-esquerda {
-        padding-right: 5rem;
+        margin-left: -30%;
+        width: 90vh;
 
         p {
             line-height: 2rem;
@@ -662,6 +666,8 @@ section {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 2rem;
         padding-bottom: 2rem;
+        margin-left: -30%;
+        margin-right: -20%;
 
         //Item da timeline
         .timeline-item {
@@ -729,6 +735,8 @@ section {
 .portfolios {
     grid-gap: 2rem;
     margin-top: 3rem;
+    margin-left: -30%;
+    margin-right: -20%;
 
     //Itens de portfolio
     .item-portfolio {
@@ -805,17 +813,25 @@ section {
 
                 //Texto
                 p {
-                    margin: .3rem 0 !important;
+                    float:right;
+                    margin-left: .3rem !important;
                     padding: 0 !important;
+                    margin-top: -8%;
+                    padding-left: 4rem;
+                }
+
+                .texocontato{
+                    margin-top: -1%;
                 }
 
                 //Ícone
                 .icon {
+                    float:left;
                     display: grid;
                     grid-template-columns: 40px 1fr;
 
                     i {
-                        display: flex;
+                        display: grid;
                         align-items: center;
                         font-size: 1.3rem;
                     }
@@ -827,6 +843,7 @@ section {
         .icone-contato {
             display: flex;
             margin-top: 2rem;
+            justify-content: center;
 
             a {
                 display: flex;

@@ -285,12 +285,13 @@ section {
 
 .header-content .header-esquerdo .h-esq-imagem {
   border-radius: var(--br-sm-2);
-  height: 90%;
-  width: 68%;
-  margin-left: 4rem;
+  height: 70%;
+  width: 80%;
+  margin-left: 2rem;
   background-color: var(--cor-fundoBotao);
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
+  margin-top: -25%;
 }
 
 .header-content .header-esquerdo .h-esq-imagem img {
@@ -320,7 +321,7 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-right: 18rem;
+  padding-right: 10rem;
 }
 
 .header-content .header-direito .nome {
@@ -462,6 +463,8 @@ section {
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
+  margin-left: -30%;
+  padding-right: 20%;
 }
 
 .sobre-mim-container .sobre-mim-direita .sobre-mim-item {
@@ -511,7 +514,8 @@ section {
 }
 
 .sobre-mim-container .sobre-mim-esquerda {
-  padding-right: 5rem;
+  margin-left: -30%;
+  width: 90vh;
 }
 
 .sobre-mim-container .sobre-mim-esquerda p {
@@ -703,6 +707,8 @@ section {
       grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
   padding-bottom: 2rem;
+  margin-left: -30%;
+  margin-right: -20%;
 }
 
 .sobre-mim-timeline .timelines .timeline-item {
@@ -765,6 +771,8 @@ section {
 .portfolios {
   grid-gap: 2rem;
   margin-top: 3rem;
+  margin-left: -30%;
+  margin-right: -20%;
 }
 
 .portfolios .item-portfolio {
@@ -847,11 +855,19 @@ section {
 }
 
 .conteudo-contato .contato-esquerda .contato-informacoes .contato-item p {
-  margin: .3rem 0 !important;
+  float: right;
+  margin-left: .3rem !important;
   padding: 0 !important;
+  margin-top: -8%;
+  padding-left: 4rem;
+}
+
+.conteudo-contato .contato-esquerda .contato-informacoes .contato-item .texocontato {
+  margin-top: -1%;
 }
 
 .conteudo-contato .contato-esquerda .contato-informacoes .contato-item .icon {
+  float: left;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 40px 1fr;
@@ -859,9 +875,8 @@ section {
 }
 
 .conteudo-contato .contato-esquerda .contato-informacoes .contato-item .icon i {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -873,6 +888,9 @@ section {
   display: -ms-flexbox;
   display: flex;
   margin-top: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .conteudo-contato .contato-esquerda .icone-contato a {
