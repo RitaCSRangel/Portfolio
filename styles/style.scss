@@ -285,7 +285,7 @@ section {
 
         //Classe nome
         .nome {
-            font-size: 3rem;
+            font-size: 2.5rem;
 
             //Definição de span
             span {
@@ -293,6 +293,12 @@ section {
                 font-weight: bold;
                 color: var(--cor-elementoDestacado-2);
             }
+        }
+
+        .subnome{
+            font-size: 1.3rem;
+            font-weight: 100;
+            color: var(--cor-elementoDestacado-2)
         }
 
         //Definição de parágrafo (p)

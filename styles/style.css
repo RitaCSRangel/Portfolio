@@ -325,12 +325,18 @@ section {
 }
 
 .header-content .header-direito .nome {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .header-content .header-direito .nome span {
   font-family: Verdana;
   font-weight: bold;
+  color: var(--cor-elementoDestacado-2);
+}
+
+.header-content .header-direito .subnome {
+  font-size: 1.3rem;
+  font-weight: 100;
   color: var(--cor-elementoDestacado-2);
 }
 

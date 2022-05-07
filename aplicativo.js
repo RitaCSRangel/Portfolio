@@ -144,11 +144,11 @@ function BotaoCurriculo() {
 
         if (document.getElementById("idiomaAtual").getAttribute("lang") == "pt-br") {
 
-            window.open('cvs/curriculo_ptbr.pdf','popUpWindow','height=600,width=600,left=10,top=10,,scrollbars=yes,menubar=no'); return false;
+            window.open('cvs/curriculo_ptbr.pdf','popUpWindow', '', true);
 
         }else if (document.getElementById("idiomaAtual").getAttribute("lang") == "en") {
 
-            window.open('cvs/curriculo_en.pdf','popUpWindow','height=600,width=600,left=10,top=10,,scrollbars=yes,menubar=no'); return false;
+            window.open('cvs/curriculo_en.pdf','popUpWindow','', true);
         }
 
     })
